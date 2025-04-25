@@ -1,0 +1,41 @@
+@font-face {
+  font-family: 'manrope';
+  src: url(../../fonts/Manrope-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'poppins';
+  src: url(../../fonts/Poppins-Regular.ttf);
+}
+
+
+.information-box {
+  background-color: #007377 !important;
+  color: #fff;
+  font-family: 'manrope';
+}
+
+.information-box h2,
+.information-box h1,
+.information-box h3 {
+  font-family: 'poppins';
+}
+
+.sign-up-button {
+  background-color: #007377;
+  color: #fff;
+}
+
+
+@media (max-width: 766px) {
+  .registration-form-details {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .information-box {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+}

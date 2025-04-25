@@ -1,0 +1,246 @@
+/* Define Variables */
+:root {
+  --primary-color: #8d448b;
+  --primary-color-hover: #7a3a78; /* Example darker shade for hover */
+  --body-text-color: #6c757d; /* Bootstrap's default gray */
+  --input-bg: rgba(0, 0, 0, 0.05);
+  --input-placeholder-color: rgba(0, 0, 0, 0.4); /* Slightly darker placeholder */
+  --white-color: #fff;
+  --border-radius: 0.25rem; /* Use variable for consistency */
+  --box-shadow-color: rgba(0, 0, 0, 0.15); /* Slightly darker shadow */
+}
+
+body {
+  font-family: "Lato", Arial, sans-serif;
+  font-size: 1rem; /* Use rem for base font size */
+  line-height: 1.7; /* Adjusted line-height slightly */
+  font-weight: normal;
+  color: var(--body-text-color);
+  background-color: #f8f9fa; /* Added a light background to body */
+}
+
+/* Utility class for visually hiding elements but keeping them for screen readers */
+/* You might already have this from Bootstrap 5 as .visually-hidden */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+
+.ftco-section {
+  padding: 6rem 0; /* Use rem */
+}
+
+.heading-section {
+  color: #333; /* Darker heading color */
+}
+
+.login-wrap {
+  position: relative;
+  background: var(--white-color);
+  border-radius: 10px;
+  box-shadow: 0px 10px 30px var(--box-shadow-color); /* Adjusted shadow */
+}
+
+.login-wrap h3 {
+  font-weight: 700;
+  font-size: 1.25rem; /* Use rem */
+  color: var(--primary-color);
+}
+
+.login-wrap .icon {
+  width: 80px;
+  height: 80px;
+  background: var(--primary-color);
+  border-radius: 50%;
+  font-size: 30px;
+  margin: 0 auto;
+  margin-bottom: 20px; /* Increased margin slightly */
+}
+
+.login-wrap .icon span {
+  color: var(--white-color);
+}
+
+.form-group {
+    position: relative; 
+}
+
+
+.form-control {
+  height: 52px; /* Slightly taller */
+  background: var(--input-bg);
+  color: #333; /* Darker text color */
+  font-size: 1rem; /* Use rem */
+  box-shadow: none;
+  border: 1px solid transparent;
+  border-radius: var(--border-radius) !important; /* Ensure consistent border-radius, !important might be needed if Bootstrap overrides heavily */
+  padding: 0.75rem 1.25rem; /* Use rem */
+  transition: all 0.2s ease-in-out;
+}
+
+.form-control:focus {
+  /* Add a subtle focus style */
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(141, 68, 139, 0.25); /* Match primary color */
+  background: var(--white-color); /* White background on focus */
+}
+
+
+.form-control::placeholder {
+  color: var(--input-placeholder-color) !important; /* Important might be needed for browser consistency */
+  opacity: 1;
+}
+
+/* Button Styling - Increased Specificity (NO !important needed if CSS order is correct) */
+.login-wrap .login-form .btn.btn-primary {
+  background: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  color: var(--white-color);
+  box-shadow: none;
+  font-weight: 600; /* Make button text slightly bolder */
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.login-wrap .login-form .btn.btn-primary:hover,
+.login-wrap .login-form .btn.btn-primary:focus {
+  background: var(--primary-color-hover);
+  border: 1px solid var(--primary-color-hover);
+  color: var(--white-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 767.98px) {
+  .ftco-section {
+    padding: 4rem 0; /* Reduce padding on smaller screens */
+  }
+  .login-wrap {
+    padding: 1.5rem !important; /* Adjust padding */
+  }
+  .checkbox-wrap {
+      font-size: 0.9rem; /* Slightly smaller text */
+  }
+  .w-50.text-md-right { /* Align forgot password link left on small screens */
+      text-align: left !important;
+      margin-top: 0.5rem; /* Add some space */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* OUT OF SCOPE --------------------------------- */
+
+.checkbox-wrap {
+  display: block;
+  position: relative;
+  padding-left: 35px; /* Increased padding */
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 1rem; /* Use rem */
+  font-weight: 500;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: var(--body-text-color); /* Use body text color */
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-wrap input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 22px; /* Slightly larger */
+  width: 22px; /* Slightly larger */
+  background-color: #eee; /* Light background */
+  border: 1px solid #ccc; /* Add border */
+  border-radius: var(--border-radius);
+  transition: background-color 0.2s ease;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox-wrap:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a background color */
+.checkbox-wrap input:checked ~ .checkmark {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox-wrap input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator (using borders for a check symbol) */
+.checkbox-wrap .checkmark:after {
+  left: 7px;
+  top: 3px;
+  width: 6px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+/* Styling for links */
+a {
+  transition: .3s all ease;
+  color: var(--primary-color);
+  text-decoration: none; /* Remove underline by default */
+}
+
+a:hover, a:focus {
+  text-decoration: underline; /* Add underline on hover/focus */
+  color: var(--primary-color-hover);
+  outline: none; /* Remove default outline */
+}
+
+/* OUT OF SCOPE --------------------------------- */
+
+
+
+
+

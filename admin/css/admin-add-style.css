@@ -1,0 +1,188 @@
+/* === Variables === */
+:root {
+    --primary-color: #19b9e7;
+    --text-color: #888;
+    --text-light: #fff;
+    --border-color-light: #ddd;
+    --border-color-medium: #ccc;
+    --bg-light: #f8f8f8;
+    --bg-medium: #f3f3f3;
+    --bg-dark: #eee;
+    --font-family-base: 'Roboto', sans-serif; /* Ensure Roboto is imported/available */
+    --input-height: 50px;
+    --border-radius: 4px;
+    --transition-speed: 0.3s;
+}
+
+/* === Base & Selection === */
+body { /* Add base font styles here if not already done */
+    font-family: var(--font-family-base);
+    /* other base styles */
+}
+
+::-moz-selection { background: var(--primary-color); color: var(--text-light); text-shadow: none; }
+::selection { background: var(--primary-color); color: var(--text-light); text-shadow: none; }
+
+/* === Top Content & Form Wrapper === */
+.inner-bg {
+    padding: 60px 0 80px 0;
+}
+
+
+
+/* === Form Top (Header) === */
+.form-top {
+    /* Replaced float layout with Flexbox */
+    display: flex;
+    justify-content: space-between; /* Pushes left and right divs apart */
+    align-items: flex-start; /* Align items to the top */
+    padding: 25px 25px 15px 25px; /* Adjusted top padding */
+    background: var(--bg-medium);
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    text-align: left; /* Kept for text inside left div */
+}
+
+
+.form-top-left h3 {
+    margin-top: 0;
+    margin-bottom: 0.5em; /* Added some spacing */
+}
+
+.form-top-right {
+    /* No float or width needed with flex */
+    padding-top: 0; /* Reset padding, align with flex */
+    font-size: 66px; /* Keep large icon size */
+    color: var(--border-color-light);
+    line-height: 1; /* Adjust line-height for better alignment */
+    text-align: right; /* Keep text alignment */
+    margin-left: 15px; /* Add some space between text and icon */
+}
+
+/* === Form Bottom (Inputs Area) === */
+.form-bottom {
+    padding: 25px 25px 30px 25px;
+    background: var(--bg-dark);
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+    text-align: left;
+}
+
+.registration-form .form-group {
+    margin-bottom: 1em; /* Removed !important - adjust selector specificity if needed */
+}
+
+/* === Input & Textarea Base Styles === */
+input[type="text"],
+input[type="email"], /* Added email type */
+input[type="password"], /* Kept for consistency if used elsewhere */
+textarea.form-control {
+    height: var(--input-height);
+    margin: 0;
+    padding: 0 20px;
+    vertical-align: middle;
+    background: var(--bg-light);
+    border: 3px solid var(--border-color-light);
+    font-family: var(--font-family-base);
+    font-size: 16px; /* Consider using rem */
+    font-weight: 300;
+    line-height: var(--input-height);
+    color: var(--text-color);
+    border-radius: var(--border-radius);
+    box-shadow: none;
+    transition: all var(--transition-speed);
+    width: 100%; /* Ensure inputs take full width of container */
+    box-sizing: border-box; /* Include padding and border in element's total width/height */
+}
+
+textarea.form-control {
+    height: 100px; /* Specific height for textarea */
+    line-height: 1.5; /* Adjust line-height for multiline text */
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea.form-control:focus {
+    outline: 0;
+    background: var(--text-light); /* Changed to white */
+    border: 3px solid var(--border-color-medium);
+    box-shadow: none;
+}
+
+/* Placeholder Styles */
+input::placeholder,
+textarea::placeholder { /* Modern syntax */
+  color: var(--text-color);
+  opacity: 1; /* Firefox needs this */
+}
+/* Remove older placeholder selectors if not needed for ancient browsers */
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder { color: var(--text-color); }
+
+
+/* === Button Styles === */
+/* Renamed class selector for specificity */
+.btn-submit.btn-add {
+    height: var(--input-height);
+    margin: 0;
+    padding: 0 20px;
+    vertical-align: middle;
+    background: var(--primary-color);
+    border: 0;
+    font-family: var(--font-family-base);
+    font-size: 16px; /* Consider using rem */
+    font-weight: 300;
+    line-height: var(--input-height);
+    color: var(--text-light);
+    border-radius: var(--border-radius);
+    text-shadow: none;
+    box-shadow: none;
+    transition: opacity var(--transition-speed); /* Only transition opacity */
+    width: 100%; /* Make button full width */
+    cursor: pointer; /* Add pointer cursor */
+}
+
+.btn-submit.btn-add:hover,
+.btn-submit.btn-add:focus,
+.btn-submit.btn-add:active { /* Combined states */
+    opacity: 0.7; /* Slightly adjusted opacity for better visibility */
+    color: var(--text-light);
+    background: var(--primary-color); /* Ensure background stays on focus */
+    outline: 0; /* Remove default focus outline */
+    box-shadow: none;
+}
+/* Optional: Add a subtle focus ring for accessibility if removing outline */
+.btn-submit.btn-add:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+
+/* === Error State === */
+.form-bottom .input-error { /* Added form-bottom for specificity */
+    border-color: var(--primary-color); /* Example error state */
+}
+
+
+/* === Responsiveness === */
+/* Existing query - maybe adjust h3/p as well */
+@media (max-width: 415px) {
+    /* Adjust heading sizes for very small screens */
+    h1, h2 { font-size: 32px; }
+    .form-top-left h3 { font-size: 1.5em; }
+    .form-top-right { font-size: 40px; } /* Scale down icon */
+}
+
+/* Consider adding breakpoints based on your grid system (e.g., Bootstrap's defaults) */
+/* Example: Make form full width on smaller screens if using col-sm-5 */
+/* @media (max-width: 767px) {
+    .col-sm-5 {
+        width: 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .form-box {
+        margin-top: 30px;
+    }
+} */
