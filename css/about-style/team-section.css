@@ -1,0 +1,113 @@
+/*====================  
+    4.9 Team CSS
+====================*/
+
+
+.team-section-padding {
+  margin: 50px 0 200px 0;
+}
+
+
+.team-block .inner-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+.team-block .inner-box .image {
+  position: relative;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+
+
+.team-block .inner-box .image img {
+  position: relative;
+  width: 100%;
+  display: block;
+
+  /* width: 100px; */
+
+  border-radius: round;
+
+}
+
+
+
+
+
+.team-block .inner-box .image .social-icons {
+  position: absolute;
+  right: -250px;
+  bottom: 10px;
+  padding: 10px 20px 8px;
+  background-color: #ffffff;
+  -webkit-transition: all 600ms ease;
+  -o-transition: all 600ms ease;
+  transition: all 600ms ease;
+}
+
+.team-block .inner-box .image .social-icons li {
+  position: relative;
+  margin-right: 15px;
+  display: inline-block;
+}
+
+.team-block .inner-box .image .social-icons li:last-child {
+  margin-right: 0px;
+}
+
+.team-block .inner-box .image .social-icons li a {
+  position: relative;
+  color: #666666;
+  font-size: 16px;
+  -webkit-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.team-block .inner-box .image .social-icons li a:hover {
+  color: #007377;
+}
+
+.team-block .inner-box:hover .image img {
+  -webkit-transform: scale(1.1) rotate(1deg);
+  -ms-transform: scale(1.1) rotate(1deg);
+  transform: scale(1.1) rotate(1deg);
+  -webkit-transition: .6s;
+  -o-transition: .6s;
+  transition: .6s;
+}
+
+.team-block .inner-box:hover .image .social-icons {
+  right: 0px;
+}
+
+.team-block .inner-box:hover .team-content .title a {
+  color: #007377;
+}
+
+.team-block .inner-box .team-content {
+  padding: 25px 0px 0px;
+}
+
+.team-block .inner-box .team-content .title {
+  font-weight: 600;
+  line-height: 1.3em;
+}
+
+.team-block .inner-box .team-content .title a {
+  color: #000000;
+  -webkit-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.team-block .inner-box .team-content .subtitle {
+  color: #666666;
+  font-size: 14px;
+  margin-top: 6px;
+}

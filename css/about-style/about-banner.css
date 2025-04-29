@@ -1,0 +1,46 @@
+@font-face {
+  font-family: 'manrope';
+  src: url(../../fonts/Manrope-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'poppins';
+  src: url(../../fonts/Poppins-Regular.ttf);
+}
+
+
+
+.about-banner-image {
+  position: relative;
+  background-image: url(../../images/about-image.png);
+  padding: 400px 0px;
+  text-align: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+#banner-sub {
+  font-family: 'poppins';
+  font-size: 50px;
+  font-weight: 500;
+  line-height: 75px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+#banner-title {
+  font-family: 'manrope';
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 38px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.divider-1 {
+  background-color: #F6DBA0;
+  height: 2px;
+  width: 41px;
+  border: 2px;
+  display: block;
+}

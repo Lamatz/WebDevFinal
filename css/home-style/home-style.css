@@ -1,0 +1,177 @@
+@font-face {
+  font-family: 'manrope';
+  src: url(../fonts/Manrope-Regular.ttf);
+}
+
+
+#home-button button {
+  background-color: #017377;
+  border: none;
+}
+
+.image-left {
+  border-radius: 0 300px 300px 0;
+}
+
+.image-right {
+  border-radius: 300px 0 0 300px;
+}
+
+#home-button i {
+  background-color: #fff;
+  color: #017377;
+  border-radius: 50%;
+  border: none;
+}
+
+.section3 .line-breaks {
+  white-space: pre-line;
+}
+
+.section3 {
+  background-color: #007377;
+}
+
+.section5 {
+  background-color: #F6DBA0;
+}
+
+.section3,
+.section4,
+.section5,
+.section6 {
+  text-align: left;
+  padding: 100px 0;
+}
+
+
+.home-section .container-fluid {
+  padding: 0;
+}
+
+.home-section {
+  width: 100%;
+}
+
+
+.section3 h3 {
+  color: #fff !important;
+  border-bottom: 1px solid #fff !important;
+}
+
+.section3 h3,
+.section4 h3,
+.section5 h3,
+.section6 h3 {
+  line-height: 1.6em;
+  margin: 0 auto;
+  font-weight: 700;
+  color: #000;
+  border-bottom: 1px solid #007377;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.section3 p,
+.section4 p,
+.section5 p,
+.section6 p {
+  line-height: 1.6em;
+  margin: 0;
+  font-weight: 300;
+  color: #000;
+  display: block;
+  margin-bottom: 0px;
+  font-size: 22px;
+  width: 100%;
+  max-width: 540px;
+}
+
+
+.home-left-image img {
+  border-radius: 0 300px 300px 0;
+}
+
+.home-right-image img {
+  border-radius: 300px 0 0 300px;
+}
+
+
+.section3-5 .home-text {
+  padding-right: 75px;
+}
+
+.section3-5 .home-image {
+  padding-left: 75px;
+}
+
+.section4-6 .home-text {
+  padding-left: 75px;
+}
+
+.section4-6 .home-image {
+  padding-right: 75px;
+}
+
+
+
+
+
+/* Media Queries */
+
+
+/* Medium (md) only */
+@media (min-width: 768px) and (max-width: 991px) {}
+
+/* Large (lg) only */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .home-section .home-text p {
+    font-size: 19px;
+  }
+}
+
+/* Extra large (xl) only*/
+@media (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Extra extra large (xxl) and below */
+@media (max-width: 1400px) {
+  .home-section .section3-5 .home-text {
+    padding-right: 0px;
+  }
+
+  .home-section .section4-6 .home-text {
+    padding-left: 0px;
+  }
+
+  .home-section .section3-5 .home-image {
+    padding-left: 50px;
+  }
+
+  .home-section .section4-6 .home-image {
+    padding-right: 50px;
+  }
+}
+
+
+
+/* Extra small (xs) and below */
+@media (max-width: 576px) {}
+
+
+
+/* Small (sm) only */
+@media (min-width: 576px) and (max-width: 768px) {}
+
+/* Medium and below */
+@media (max-width: 768px) {
+  .home-section h3 {
+    font-size: 20px;
+  }
+}
+
+/* Large (lg) and below */
+@media (max-width: 992px) {
+  .home-section .home-text {
+    padding: 30px;
+  }
+}

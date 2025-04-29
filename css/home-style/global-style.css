@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Neonderthaw&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+
+@font-face {
+  font-family: 'manrope';
+  src: url(../fonts/Manrope-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'poppins';
+  src: url(../fonts/Poppins-Regular.ttf);
+}
+
+
+/* GENERAL STYLE */
+body,
+html {
+  overflow-x: hidden;
+}
+
+
+h1 {
+  font-size: 60px;
+  font-family: 'poppins';
+}
+
+h2 {
+  font-size: 48px;
+  font-family: 'poppins';
+  color: #000000;
+}
+
+h3 {
+  font-size: 30px;
+  font-family: 'poppins';
+  color: #000000;
+}
+
+h4 {
+  font-size: 28px;
+  font-family: 'poppins';
+  font-weight: 300;
+}
+
+ol li,
+ul li,
+p {
+  font-size: 18px;
+  font-family: 'manrope';
+  color: #000000;
+  line-height: 2em;
+}
+
+a {
+  color: #017377;
+  text-decoration: none;
+}
+
+
+.btn {
+  border-radius: 50px !important;
+  font-family: 'manrope';
+}
+
+.teal {
+  color: #007377;
+}
+
+
+
+.manrope {
+  font-family: 'manrope';
+}
+
+
+
+
+
+@media screen and (min-width: 993px) {
+  #myNavbar1 {
+    display: inline-block !important;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .navbar {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+
+
+  #footer-logo {
+    max-width: 240px;
+    /* 300 original value */
+    margin: 0 auto 50px;
+    display: block;
+  }
+
+  #socket-links li {
+    margin-left: 40px;
+  }
+
+  #myNavbar1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px 25px;
+    background-color: #fff;
+    width: 100%;
+    z-index: 10;
+  }
+
+
+
+  #right-menu {
+    width: 218px;
+  }
+
+
+
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  /* HOME STYLES */
+  #homebanner {
+    font-size: 40px;
+  }
+
+  #homebanner svg {
+    width: 170px;
+  }
+
+  .section2 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  .section3,
+  .section4,
+  .section5,
+  .section6 {
+    text-align: left;
+    padding: 50px 0 30px;
+  }
+
+  .home-image img {
+    width: 100%;
+  }
+
+  .section3 .home-image,
+  .section5 .home-image {
+    padding-left: 50px;
+  }
+
+  .section4 .home-image,
+  .section6 .home-image {
+    padding-right: 50px;
+  }
+
+  .section4 .home-text .lc-block,
+  .section6 .home-text .lc-block,
+  .section3 .home-text .lc-block,
+  .section5 .home-text .lc-block {
+    padding: 30px;
+  }
+
+  .section4 .home-text .lc-block,
+  .section6 .home-text .lc-block,
+  .section3 .home-text .lc-block,
+  .section5 .home-text .lc-block,
+  .section4 p,
+  .section6 p,
+  .section3 p,
+  .section5 p {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .section4 p,
+  .section6 p,
+  .section3 p,
+  .section5 p {
+    font-size: 16px;
+    line-height: 1.8em;
+  }
+
+  .section3 h3,
+  .section4 h3,
+  .section5 h3,
+  .section6 h3 {
+    font-size: 22px;
+  }
+
+  /* end HOME STYLES */
+
+
+}
+
+@media screen and (max-width: 767px) {
+
+  .footer-links li,
+  #footer-social {
+    display: block;
+  }
+
+  #footer-social {
+    margin-top: 30px;
+  }
+
+  #footer-section {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  #copyright-text,
+  #socket-links {
+    text-align: center;
+  }
+
+  #socket-links li {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+
+
+@media screen and (max-width: 576px) {
+  .navbar-brand img {
+    max-width: 118px;
+    width: 100%;
+  }
+
+}
+
+@media screen and (max-width: 468px) {
+  .navbar-brand svg {
+    width: 126px;
+  }
+}
+
+@media screen and (max-width: 428px) {
+
+  .section4 .home-image,
+  .section6 .home-image {
+    padding-right: 20px;
+  }
+
+  .section3 .home-image,
+  .section5 .home-image {
+    padding-left: 20px;
+  }
+
+  #footer-socket {
+    max-width: 282px;
+    margin: 0 auto;
+  }
+
+
+}

@@ -1,7 +1,4 @@
 <?php
-// profile.php - Example Protected Client Page (NO INCLUDES)
-
-// ALWAYS start session at the very top of any page that uses sessions
 session_start();
 
 // --- Authentication Check ---
@@ -11,92 +8,286 @@ if (!isset($_SESSION['user_id']) || empty($_SESSION['user_id'])) {
     exit();
 }
 
-// --- If execution reaches here, the user IS logged in ---
-
-// Determine if the user is logged in (needed for conditional display below)
-$is_logged_in = true; // We know they are because they passed the check above
-
+$is_logged_in = true;
 ?>
 
 
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-US">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Your Custom CSS -->
-    <link rel="stylesheet" href="/webdevfinal/css/style.css"> <?php // Adjust path ?>
+	<title>TrooLife</title>
 
-    <title>Main Page</title> 
 
-    <style>
+	<!-- BOOTSTRAP LINKS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+
+	<!-- ICON LINKS -->
+	<link rel='stylesheet' href='https://www.troolife.com/wp-content/themes/picostrap5-child-base/css-output/bundle.css?ver=956' media='all'>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+
+	<!-- CSS LINKS -->
+	<link rel="stylesheet" href="css/header-style.css">
+	<link rel="stylesheet" href="css/footer-style.css">
+
+	<link rel='stylesheet' href='css/home-style/bundle.css' media='all'>
+	<link rel="stylesheet" href="css/home-style/section1-style.css">
+	<link rel="stylesheet" href="css/home-style/section7-style.css">
+	<link rel="stylesheet" href="css/home-style/home-style.css">
+	<link rel="stylesheet" href="css/home-style/homebanner-style.css">
+	<link rel="stylesheet" href="css/global-style.css">
+
+
+	<!-- <style>
         /* Basic styling for the profile pic in the navbar */
         .navbar-profile-pic {
             height: 35px; width: 35px; border-radius: 50%; object-fit: cover;
             margin-right: 8px; vertical-align: middle;
         }
-    </style>
+    </style> -->
+
 </head>
 
 
 
-<body>
+<body class="">
 
-    <!-- NAVBAR START -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/webdevfinal/index.php">Troolife</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="mainNavbar">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item"> <a class="nav-link active" aria-current="page" href="/webdevfinal/index.php">Home</a> </li>
-                    <li class="nav-item"> <a class="nav-link" href="/webdevfinal/about.php">About</a> </li>
-                </ul>
-                <ul class="navbar-nav mb-2 mb-lg-0">
-                    <?php // --- User is Logged In (We know this is true on this page) --- ?>
-                    <li class="nav-item d-flex align-items-center">
-                         <?php if (isset($_SESSION['profile_photo']) && !empty($_SESSION['profile_photo'])): ?>
-                            <img src="<?php echo htmlspecialchars($_SESSION['profile_photo']); ?>" alt="Profile Photo" class="navbar-profile-pic">
-                         <?php endif; ?>
-                         <span class="navbar-text"> Welcome, <?php echo htmlspecialchars($_SESSION['first_name'] ?? 'User'); ?>! </span>
-                    </li>
-                    <li class="nav-item"> <a class="nav-link" href="/webdevfinal/user-profile.php">Profile</a> </li>
-                    <li class="nav-item"> <a class="nav-link" href="/webdevfinal/edit_profile.php">Edit Profile</a> </li>
-                    <li class="nav-item"> <a class="nav-link" href="/webdevfinal/assets/php/logout.php">Logout</a> </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <!-- NAVBAR END -->
+	<?php require 'includes/header.php'; ?>
 
 
-    <!-- MAIN CONTENT START -->
-    <main class="container mt-4">
-        <h1>Client Profile Page</h1>
-        <p>It works!! This content is only shown if you are logged in.</p>
-        <p>Welcome back, <?php echo htmlspecialchars($_SESSION['first_name']); ?>!</p>
-    </main>
-    <!-- MAIN CONTENT END -->
+
+	<main id='theme-main'>
+
+		<!-- HOME BANNER -->
+
+		<section class="section1">
+			<div class="position-relative overflow-hidden">
+				<div class="d-flex min-vh-100 justify-content-center text-center">
+					<video style="z-index:1;object-fit: cover; object-position: 50% 50%;"
+						class="position-absolute w-100 min-vh-100" autoplay="" preload="" muted="" loop="" playsinline="">
+						<source src="video/vid.mp4" type="video/mp4">
+					</video>
+					<div style="z-index:2" class="align-self-center text-center text-light col-md-8">
+						<div class="lc-block container d-flex align-items-center justify-content-center flex-column">
+
+							<h1 id="homebanner" class="container">
+								<img style="margin-top: -8px;" src="images/icons/logo2.svg" alt="logo"> is dedicated to enhancing the
+								quality and longevity of lives.
+							</h1>
+
+
+							<a href="#" class="btn btn-primary rounded-pill px-4 py-2 mt-5 d-inline-flex align-items-center gap-2">
+								Learn more
+								<i class="material-icons d-flex justify-content-center align-items-center">keyboard_arrow_right</i>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+		</section>
 
 
 
 
-    <!-- FOOTER START -->
-    <footer class="container mt-5 text-center text-muted">
-        <hr>
-    </footer>
-    <!-- FOOTER END -->
+		<section class="section2">
+			<div class="container-fluid px-4">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="lc-block">
+							<div>
+								<h2 class="fw-semibold">Our Mission</h2>
+								<div class="divider-teal"></div>
+								<p> Our TrooLife mission is to empower Members to make a true difference in their own personal health,
+									wellness and longevity. For them to enhance their own quality of life, and then to inspire a better
+									quality of life for their family, friends and associates. </p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 
 
-</body> 
-</html> 
+
+		<!-- HOME SECTION -->
+		<div class="home-section">
+			<section class="section3 section3-5">
+				<div class="container-fluid">
+					<div class="row align-items-center">
+						<div class="col-lg-6 d-flex justify-content-end order-2 order-lg-1 ps-lg-5 home-text">
+							<div class="lc-block">
+								<div>
+									<h3>The things you consistently do</h3>
+									<p class="line-breaks" style="color: #fff;"> to enhance your mind, your body, your relationships and
+										your finances – will enhance your quality of life - and the quality of your extended life.
+
+										Also be aware that the things that you do not bother to do for your mind, body, relationships and
+										finances – will reduce your quality of life. </p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-12 col-lg-6 home-image container-fluid d-flex justify-content-end order-1 order-lg-2">
+							<div class="home-right-image">
+								<img decoding="async" src="images/img1.png">
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+			<section class="section4 section4-6">
+				<div class="container-fluid">
+					<div class="row align-items-center">
+						<div class="col-md-12 col-lg-6 home-image container-fluid d-flex justify-content-start ">
+							<div class="home-left-image">
+								<img decoding="async" src="images/img2.png">
+							</div>
+						</div>
+						<div class="col-lg-6 d-flex justify-content-start pe-lg-5 home-text">
+							<div class="lc-block">
+								<h3 class="">Health experts say</h3>
+								<p> we should have five servings or fresh fruits and vegetables every day, however this is not practical
+									or possible for most active adults. This is why these same experts recommend supplementing your diet
+									with high-quality vitamins, minerals, antioxidants and amino acids to help provide optimal health,
+									vitality and mental clarity. </p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+			<section class="section5 section3-5">
+				<div class="container-fluid ">
+					<div class="row align-items-center">
+						<!-- Text Column -->
+						<div class="col-lg-6 d-flex justify-content-end order-2 order-lg-1 ps-lg-5 home-text">
+							<div class="lc-block">
+								<h3>Through our LifeLine program</h3>
+								<p class="mb-0">TrooLife will act as your personal wellness coach, encouraging you to eat well, to
+									maintain a healthy activity level and to help you de-stress from your work and family pressures.
+									LifeLine will also advise you on how to optimize your important personal relationships with your
+									family, friends and associates, to enhance your own life, and theirs.</p>
+							</div>
+						</div>
+						<div class="col-md-12 col-lg-6 home-image container-fluid d-flex justify-content-end order-1 order-lg-2">
+							<div class="home-right-image">
+								<img decoding="async" src="images/img3.png">
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="section6 section4-6">
+				<div class="container-fluid">
+					<div class="row align-items-center">
+						<div class="col-md-12 col-lg-6 home-image container-fluid d-flex justify-content-start ">
+							<div class="home-left-image">
+								<img decoding="async" src="images/img4.png">
+							</div>
+						</div>
+						<div class="col-lg-6 d-flex justify-content-start pe-lg-5 home-text">
+							<div class="lc-block">
+								<h3 class="">TrooLife is also committed</h3>
+								<p> to providing you excellent product quality and value, with the means to receive your nutritional
+									supplements and wellness coaching for free, from a few simple referrals. Please take a few minutes to
+									find out how. </p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="d-flex justify-content-center mt-5 pt-lg-3" id="home-button">
+					<button type="button" class="btn btn-primary rounded-pill px-4 py-2 d-inline-flex align-items-center gap-2">
+						Get Started
+						<i class="material-icons d-flex justify-content-center align-items-center">keyboard_arrow_right</i>
+					</button>
+				</div>
+
+			</section>
+
+		</div>
+
+
+
+		<!-- SECTION - 7 ------------------- -->
+
+		<section class="section7">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 text-center sectionheader">
+						<h2>Realize Your True Life Potential</h2>
+						<div class="divider-ochre mx-auto"></div>
+					</div>
+				</div>
+
+				<!-- First Icon -->
+				<div class="row">
+					<div class="col-md-4 mb-4 mb-md-0 icon-container">
+						<div class="inner-container text-center ">
+							<img src="images/icons/wellness-coaching.svg" alt="icon1" class="img-fluid mb-3">
+							<h3 class="potential-title container">LifeLine Wellness Coaching</h3>
+							<a href="#" class="btn btn-primary rounded-pill px-4 py-2 d-inline-flex align-items-center gap-2">
+								Learn more
+								<i class="material-icons d-flex justify-content-center align-items-center">keyboard_arrow_right</i>
+							</a>
+						</div>
+					</div>
+
+					<!-- Second Icon -->
+					<div class="col-md-4 mb-4 mb-md-0 icon-container">
+						<div class="inner-container text-center">
+							<img src="images/icons/nutritional-health.svg" alt="icon2" class="img-fluid mb-3">
+							<h3 class="potential-title mb-md-5 pb-md-4">Nutritional Health</h3>
+							<a href="#" class="btn btn-primary rounded-pill px-4 py-2 d-inline-flex align-items-center gap-2">
+								Learn more
+								<i class="material-icons d-flex justify-content-center align-items-center">keyboard_arrow_right</i>
+							</a>
+						</div>
+					</div>
+
+					<!-- Third Icon -->
+					<div class="col-md-4 icon-container">
+						<div class="inner-container text-center">
+							<img src="images/icons/referral-benefits.svg" alt="icon3" class="img-fluid mb-3">
+							<h3 class="potential-title mb-md-5 pb-md-4">Referral Benefits</h3>
+							<a href="#" class="btn btn-primary rounded-pill px-4 py-2 d-inline-flex align-items-center gap-2">
+								Learn more
+								<i class="material-icons d-flex justify-content-center align-items-center">keyboard_arrow_right</i>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		</div>
+
+	</main>
+
+
+
+	<?php require 'includes/footer.php'; ?>
+
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+	</script>
+</body>
+
+</html>

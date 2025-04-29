@@ -1,0 +1,139 @@
+/* Check the responsiveness of footer socket, I think it can be better */
+
+@font-face {
+  font-family: 'manrope';
+  src: url(../fonts/Manrope-Regular.ttf);
+}
+
+/* FOOTER STYLE */
+#footer-section {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+#footer-logo {
+  width: 100%;
+  max-width: 446px;
+}
+
+.footer-links {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 14px;
+}
+
+.footer-links li a {
+  font-size: 18px;
+  line-height: 24px;
+  text-decoration: none;
+  color: #000;
+  font-family: 'manrope';
+  font-weight: 600;
+}
+
+#footer-social p {
+  font-size: 18px;
+  margin-bottom: 14px;
+  font-family: 'manrope';
+  font-weight: 600;
+}
+
+#footer-social ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+#footer-social ul li {
+  margin-bottom: 12px;
+}
+
+#footer-social ul li svg {
+  margin-right: 10px;
+}
+
+#footer-social ul li a {
+  color: #000;
+  text-decoration: none;
+  font-family: 'manrope';
+}
+
+
+
+
+#footer-socket {
+  border-top: 1px solid #c4c4c4;
+  padding: 0;
+}
+
+.footer-socket-container {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin: auto !important;
+}
+
+#copyright-text {
+  font-size: 18px;
+  color: #007377;
+}
+
+#socket-links {
+  text-align: right;
+}
+
+#socket-links li {
+  list-style: none;
+  display: inline-block;
+  margin-left: 80px;
+}
+
+#socket-links li a {
+  color: #000;
+  text-decoration: none;
+  font-size: 18px;
+  transition: all ease 0.3s;
+  font-weight: 600;
+}
+
+#socket-links li a:hover {
+  color: #007377;
+  transition: all ease 0.3s;
+}
+
+
+#footer-socket {
+  border-top-color: #c4c4c4 !important;
+  /* Override Bootstrap border color */
+}
+
+.text-teal {
+  color: #007377;
+}
+
+.hover-text-teal:hover {
+  color: #007377 !important;
+}
+
+
+
+
+
+
+@media (max-width: 768px) {
+  #footer-section .footer-container {
+    padding: 0px 47px !important;
+  }
+}
+
+
+@media (max-width: 576px) {
+  #footer-socket ul {
+    margin-bottom: 20px !important;
+  }
+}
+
+/* end FOOTER STYLE */

@@ -1,0 +1,180 @@
+/*====================  
+    4.3 Service CSS
+====================*/
+
+/*-----------------------------------
+  1. Base Link & Input Styling
+-----------------------------------*/
+a,
+a:hover,
+a:focus,
+a:active,
+button,
+button:focus,
+.btn,
+.btn:focus,
+input,
+input:focus,
+select,
+textarea {
+  transition: all 0.3s ease 0s;
+  color: #000000;
+  text-decoration: none;
+  outline: 0;
+  background: none;
+  border: 0px;
+}
+
+/*-----------------------------------
+  2. Layout & Container
+-----------------------------------*/
+.service-inner-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+/*-----------------------------------
+  3. Service Block - Base Styling
+-----------------------------------*/
+.service-inner-container .service-block {
+  width: 25%;
+  border: 1px solid #E6E6E6;
+  border-right: none;
+  background: #fff;
+  position: relative;
+}
+
+.service-inner-container .service-block:last-child {
+  border-right: 1px solid #E6E6E6;
+}
+
+/*-----------------------------------
+  4. Inner Box
+-----------------------------------*/
+.service-inner-container .service-block .inner-box {
+  position: relative;
+  min-height: 330px;
+  padding: 32px 30px 25px;
+}
+
+/* Responsive inner-box padding */
+@media only screen and (min-width: 992px) and (max-width: 1199px),
+only screen and (max-width: 575px) {
+  .service-inner-container .service-block .inner-box {
+    padding: 25px 15px;
+  }
+}
+
+/* Hover effect background overlay */
+.service-inner-container .service-block .inner-box::before {
+  position: absolute;
+  content: '';
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  transform: scale(0, 1);
+  background-color: #007377;
+  transition: all 0.3s ease 0s;
+}
+
+/*-----------------------------------
+  5. Title Styling
+-----------------------------------*/
+.section-title .title {
+  font-size: 30px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  color: #000000;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+.service-inner-container .service-block .inner-box .title {
+  position: relative;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.service-inner-container .service-block .inner-box .title a {
+  position: relative;
+  color: #000;
+}
+
+/*-----------------------------------
+  6. Description Paragraph
+-----------------------------------*/
+.service-inner-container .service-block .inner-box p {
+  position: relative;
+  font-size: 14px;
+  line-height: 1.9;
+  margin-bottom: 25px;
+  transition: all 0.3s ease 0s;
+}
+
+/*-----------------------------------
+  7. More Link
+-----------------------------------*/
+.service-inner-container .service-block .inner-box .more {
+  position: relative;
+  color: #000;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 30px;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+/*-----------------------------------
+  8. Icon Link Bottom Positioning
+-----------------------------------*/
+.service-inner-container .service-block .inner-box .icon-link-bottom {
+  position: absolute;
+  bottom: 20px;
+  left: 30px;
+}
+
+/*-----------------------------------
+  9. Hover Effects
+-----------------------------------*/
+.service-inner-container .service-block .inner-box:hover::before {
+  transform: scale(1, 1);
+}
+
+.service-inner-container .service-block .inner-box:hover .title a,
+.service-inner-container .service-block .inner-box:hover .more,
+.service-inner-container .service-block .inner-box:hover .icon,
+.service-inner-container .service-block .inner-box:hover p {
+  color: #fff;
+}
+
+/*-----------------------------------
+  10. Responsive Design
+-----------------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 991px),
+only screen and (max-width: 767px) {
+  .service-inner-container .service-block {
+    width: 50%;
+  }
+
+  .service-inner-container .service-block:nth-of-type(1),
+  .service-inner-container .service-block:nth-of-type(2) {
+    border-bottom: 0px;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  .service-inner-container .service-block {
+    width: 100%;
+    border-right: 1px solid #E6E6E6;
+  }
+
+  .service-inner-container .service-block:nth-of-type(1),
+  .service-inner-container .service-block:nth-of-type(2),
+  .service-inner-container .service-block:nth-of-type(3) {
+    border-bottom: 0px;
+  }
+}

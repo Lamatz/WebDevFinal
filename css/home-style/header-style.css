@@ -1,0 +1,441 @@
+@font-face {
+  font-family: 'manrope';
+  src: url(../fonts/Manrope-Regular.ttf);
+}
+
+
+/* PROFILE SECTION */
+
+.profile-section {
+  height: 80px;
+}
+
+.section0 {
+  background-color: #F6DBA0 !important;
+}
+
+.profile-name {
+  font-family: 'manrope';
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Basic styling for the profile pic in the navbar */
+
+.section0 .profile-section .navbar-profile-pic {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+
+
+nav {
+  background-color: #007377;
+}
+
+#english-icon {
+  padding-left: 10px;
+}
+
+#main-Nav {
+  display: flex;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar {
+  padding-top: 1.5rem;
+  /* padding-bottom: 1.5rem; */
+  background-color: #007377 !important;
+}
+
+.navbar-brand img {
+  width: 158px;
+  width: 100%;
+}
+
+
+.navbar-brand i {
+  font-size: 24px;
+}
+
+
+.navbar-brand {
+  margin-left: 30px;
+}
+
+#my-office {
+  margin-right: 20px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  font-family: 'manrope';
+}
+
+#my-office img {
+  margin-top: -6px;
+  margin-right: 6px;
+}
+
+#english-icon i {
+  color: #F6DBA0;
+  font-size: 24px;
+}
+
+#english-icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-family: 'manrope';
+  margin-right: 5px;
+}
+
+#english-icon i {
+  margin-top: -6px;
+  padding-right: 10px;
+}
+
+
+
+
+
+/* 41px and 81px are the correct measurements but looks ugly */
+#my-cart {
+  display: inline-block;
+  margin-left: 30px;
+  margin-right: 31px;
+  padding-right: 61px;
+  border-right: 1px solid #C4C4C4;
+
+}
+
+#my-cart img {
+  height: 24px;
+  width: 24px;
+}
+
+#right-menu {
+  width: 740px;
+}
+
+
+.nav-link {
+  color: #fff !important;
+  font-size: 16px;
+  padding: 0 12px !important;
+  font-family: 'manrope' !important;
+}
+
+.dropdown-toggle::after {
+  vertical-align: middle;
+}
+
+.btn-outline-light {
+  border-color: #fff;
+  color: #fff;
+  font-family: 'manrope';
+}
+
+.btn-outline-light:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+
+
+.hamburger-office {
+  display: none !important;
+}
+
+
+
+#cart-badge {
+  display: block;
+  position: relative !important;
+}
+
+
+#cart-badge::after {
+  content: "0";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background-color: #F6DBA0;
+  color: #007377;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  font-size: 16px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'manrope';
+  z-index: 10;
+  transform: translate(110%, -25%)
+}
+
+
+.office-collapse {
+  display: none;
+}
+
+.white-divider {
+  border-bottom: #fff 1px solid;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active {
+  outline: none;
+  box-shadow: none;
+}
+
+
+
+
+
+@media (max-width: 1400px) {
+  #my-cart {
+    margin-right: 21px;
+    padding-right: 51px;
+  }
+}
+
+
+@media (max-width: 991px) {}
+
+@media (max-width: 991px) and (min-width: 571px) {
+  .navbar-collapse {
+    padding: 2rem 0;
+  }
+
+  .nav-item {
+    margin: 0.5rem 0;
+  }
+
+  .dropdown-menu {
+    border: none;
+    background-color: transparent;
+  }
+
+  .dropdown-item {
+    color: #fff !important;
+    padding-left: 0;
+  }
+
+  .navbar-brand {
+    margin-left: 5px;
+  }
+
+  #english-icon img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #my-office {
+    display: none;
+  }
+
+  #my-cart {
+    border: none;
+    padding: 0 0 6px 0;
+    margin: 0 30px;
+  }
+
+  #my-cart img {
+    width: 20px;
+    height: 20px;
+  }
+
+  #cart-badge::after {
+    width: 17px;
+    height: 17px;
+    font-size: 10px;
+  }
+
+  .hamburger-office {
+    display: block !important;
+  }
+
+  .right-nav {
+    position: relative !important;
+  }
+
+  .right-nav {
+    position: absolute !important;
+    top: 35px !important;
+    right: 0 !important;
+    padding: 10px;
+    /* Adjust spacing */
+  }
+
+  .office-collapse {
+    display: block !important;
+    /* align-self: center; */
+  }
+}
+
+
+@media screen and (max-width: 570px) {
+
+
+  #english-icon img {
+    width: 18px !important;
+    height: 18px !important;
+  }
+
+  #english-icon {
+    margin-right: 10px !important;
+    font-size: 14px;
+  }
+
+
+  #cart-badge {
+    width: 17px !important;
+    height: 17px !important;
+    font-size: 10px;
+  }
+
+  #my-cart {
+    margin: 0 25px;
+  }
+
+  .navbar-brand {
+    margin-left: 5px;
+  }
+
+}
+
+
+
+@media screen and (max-width: 1346px) and (min-width: 1220px) {
+  #my-cart {
+    display: inline-block;
+    /* margin-left: 10px;
+  margin-right: 20px;
+  padding-right: 30px; */
+  }
+
+  #my-office {
+    margin-right: 20px;
+    font-size: 15px;
+  }
+
+  .navbar-brand img {
+    max-width: 128px;
+  }
+
+  /* #right-menu {
+    width: 740px;
+    } */
+}
+
+
+
+@media screen and (max-width: 1258px) and (min-width: 1141px) {
+
+  .navbar a,
+  .right-nav a,
+  #my-office {
+    font-size: 14px;
+  }
+
+
+  .navbar-brand img {
+    max-width: 110px;
+  }
+
+  #my-office {
+    margin-right: 16px;
+    /* margin-top: 6px; */
+  }
+
+  #cart-badge::after {
+    height: 22px;
+    width: 22px;
+  }
+
+  #my-cart img {
+    height: 18px !important;
+    width: 18px !important;
+  }
+
+  #my-office img {
+    height: 20px;
+    width: 20px;
+  }
+
+  #english-icon img {
+    height: 20px;
+    width: 20px;
+  }
+
+  /* #right-menu {
+  width: 318px;
+  } */
+}
+
+
+
+@media screen and (max-width: 1142px) and (min-width: 993px) {
+
+  .navbar-brand img {
+    width: 150px;
+  }
+
+  .navbar a,
+  .right-nav a,
+  #my-office {
+    font-size: 12px;
+  }
+
+  .navbar-brand img {
+    max-width: 110px;
+  }
+
+  #my-office {
+    margin-right: 12px;
+    /* margin-top: 6px; */
+  }
+
+
+
+  #cart-badge::after {
+    height: 20px;
+    width: 20px;
+  }
+
+  #my-cart img {
+    height: 18px !important;
+    width: 18px !important;
+  }
+
+  #my-office img {
+    height: 20px;
+    width: 20px;
+  }
+
+  #english-icon img {
+    height: 20px;
+    width: 20px;
+  }
+
+  #english-icon {
+    padding-bottom: 5px;
+  }
+
+
+  .navbar {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
