@@ -151,7 +151,12 @@ mysqli_close($conn);
         <!-- Navbar Brand-->
         <a class="navbar-brand ps-3" href="index.html">Start Bootstrap</a>
         <!-- Sidebar Toggle-->
+
+        
         <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i
+                class="fas fa-bars"></i></button>
+
+        <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0 d-md-none" id="sidebarToggle" href="#!"><i
                 class="fas fa-bars"></i></button>
 
 
@@ -295,21 +300,21 @@ mysqli_close($conn);
 
 
                                                 <div class="text-center">
-                                                <?php
-                                                if ((int) $user['is_active'] === 1):
-                                                    ?>
-                                                    <!-- User is Active -> Show Deactivate Button -->
-                                                    <button type="button" class="btn btn-danger btn-sm"
-                                                        onclick="confirmAndDeactivate(<?php echo $user['user_id']; ?>, '<?php echo htmlspecialchars(addslashes($user['username'])); ?>')">
-                                                        Deactivate
-                                                    </button>
-                                                <?php else: // User is Inactive (is_active is 0 or potentially NULL/other) ?>
-                                                    <!-- User is Inactive -> Show Reactivate Button -->
-                                                    <button type="button" class="btn btn-success btn-sm ms-1"
-                                                        onclick="confirmAndReactivate(<?php echo $user['user_id']; ?>, '<?php echo htmlspecialchars(addslashes($user['username'])); ?>')">
-                                                        Reactivate
-                                                    </button>
-                                                <?php endif; ?>
+                                                    <?php
+                                                    if ((int) $user['is_active'] === 1):
+                                                        ?>
+                                                        <!-- User is Active -> Show Deactivate Button -->
+                                                        <button type="button" class="btn btn-danger btn-sm"
+                                                            onclick="confirmAndDeactivate(<?php echo $user['user_id']; ?>, '<?php echo htmlspecialchars(addslashes($user['username'])); ?>')">
+                                                            Deactivate
+                                                        </button>
+                                                    <?php else: // User is Inactive (is_active is 0 or potentially NULL/other) ?>
+                                                        <!-- User is Inactive -> Show Reactivate Button -->
+                                                        <button type="button" class="btn btn-success btn-sm ms-1"
+                                                            onclick="confirmAndReactivate(<?php echo $user['user_id']; ?>, '<?php echo htmlspecialchars(addslashes($user['username'])); ?>')">
+                                                            Reactivate
+                                                        </button>
+                                                    <?php endif; ?>
                                                 </div>
 
 

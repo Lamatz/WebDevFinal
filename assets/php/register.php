@@ -179,10 +179,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $existing_user = $result_check->fetch_assoc(); // Fetch as associative array
 
                 if ($existing_user) {
-                    if ($existing_user['username'] === $_SESSION['form_data']['username']) {
+                    // Convert both the fetched username and the submitted username to lowercase for comparison
+                    if (strtolower($existing_user['username']) === strtolower($_SESSION['form_data']['username'])) {
                         $_SESSION['errors']['username'] = "Username already taken.";
                     }
-                    if ($existing_user['email'] === $_SESSION['form_data']['email']) {
+                    if (strtolower($existing_user['email']) === strtolower($_SESSION['form_data']['email'])) {
                          $_SESSION['errors']['email'] = "Email address already registered.";
                     }
                 }
