@@ -27,6 +27,11 @@
 }
 
 
+.error-light{
+  color: #FF6666 !important; /* Or white, or a light yellow */
+  text-shadow: 0 0 5px rgba(255, 0, 0, 0.7) !important; /* Red glow */
+}
+
 @media (max-width: 766px) {
   .registration-form-details {
     padding-top: 2rem;

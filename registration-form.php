@@ -97,7 +97,7 @@ unset($_SESSION['success_message']);
                         id="first_name" name="first_name" placeholder="First Name" value="<?php echo htmlspecialchars($form_data['first_name'] ?? ''); ?>"
                         required>
                         <?php if (isset($errors['first_name'])): ?>
-                          <div class="invalid-feedback d-block"> <!-- Use d-block if Bootstrap hides it by default -->
+                          <div class="invalid-feedback d-block error-light "> <!-- Use d-block if Bootstrap hides it by default -->
                             <?php echo htmlspecialchars($errors['first_name']); ?>
                           </div>
                         <?php endif; ?>
@@ -110,7 +110,7 @@ unset($_SESSION['success_message']);
                       name="last_name" id="lastName" placeholder="Last Name" value="<?php echo htmlspecialchars($form_data['last_name'] ?? ''); ?>"
                         required>
                         <?php if (isset($errors['last_name'])): ?>
-                          <div class="invalid-feedback d-block"> <!-- Use d-block if Bootstrap hides it by default -->
+                          <div class="invalid-feedback d-block error-light"> <!-- Use d-block if Bootstrap hides it by default -->
                             <?php echo htmlspecialchars($errors['last_name']); ?>
                           </div>
                         <?php endif; ?>
@@ -124,7 +124,7 @@ unset($_SESSION['success_message']);
                       name="birthday" id="birthday" value="<?php echo htmlspecialchars($form_data['birthday'] ?? ''); ?>"
                       required>
                       <?php if (isset($errors['birthday'])): ?>
-                          <div class="invalid-feedback d-block"> <!-- Use d-block if Bootstrap hides it by default -->
+                          <div class="invalid-feedback d-block error-light"> <!-- Use d-block if Bootstrap hides it by default -->
                             <?php echo htmlspecialchars($errors['birthday']); ?>
                           </div>
                         <?php endif; ?>
@@ -144,7 +144,7 @@ unset($_SESSION['success_message']);
                         <label for="female" class="form-check-label">Female</label>
                       </div>
                       <?php if (isset($errors['Gender'])): ?>
-                          <div class="invalid-feedback d-block"> <!-- Use d-block if Bootstrap hides it by default -->
+                          <div class="invalid-feedback d-block error-light"> <!-- Use d-block if Bootstrap hides it by default -->
                             <?php echo htmlspecialchars($errors['Gender']); ?>
                           </div>
                         <?php endif; ?>
@@ -160,7 +160,7 @@ unset($_SESSION['success_message']);
                              type="file" id="image" name="image" accept="image/jpeg, image/png, image/gif" <?php // Be more specific with accept ?>
                          required>
                         <?php if (isset($errors['image'])): ?>
-                          <div class="invalid-feedback d-block">
+                          <div class="invalid-feedback d-block error-light">
                             <?php echo htmlspecialchars($errors['image']); ?>
                           </div>
                         <?php endif; ?>
@@ -234,6 +234,11 @@ unset($_SESSION['success_message']);
                     <label class="form-check-label text-secondary" for="iAgree">
                       I agree to the <a href="#!" class="link-primary text-decoration-none">terms and conditions</a>
                     </label>
+                     <?php if (isset($errors['iAgree'])): ?>
+                          <div class="invalid-feedback d-block">
+                            <?php echo htmlspecialchars($errors['iAgree']); ?>
+                          </div>
+                        <?php endif; ?>
                   </div>
                 </div>
                 <div class="col-12">

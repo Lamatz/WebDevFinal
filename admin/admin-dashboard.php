@@ -149,14 +149,9 @@ mysqli_close($conn);
 
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
         <!-- Navbar Brand-->
-        <a class="navbar-brand ps-3" href="index.html">Start Bootstrap</a>
+        <a class="navbar-brand ps-3" href="#">TrooLife</a>
         <!-- Sidebar Toggle-->
-
-        
         <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i
-                class="fas fa-bars"></i></button>
-
-        <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0 d-md-none" id="sidebarToggle" href="#!"><i
                 class="fas fa-bars"></i></button>
 
 
@@ -184,7 +179,7 @@ mysqli_close($conn);
             <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                 <div class="sb-sidenav-menu">
                     <div class="nav">
-                        <div class="sb-sidenav-menu-heading">Core</div>
+                        <div class="sb-sidenav-menu-heading">Sections</div>
                         <a class="nav-link" href="#">
                             <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                             User Accounts
@@ -280,7 +275,6 @@ mysqli_close($conn);
                                 </tfoot>
 
                                 <tbody>
-                                    <?php // --- Loop through the fetched user data --- ?>
                                     <?php foreach ($all_users_data as $user): ?>
                                         <tr>
                                             <td><?php echo htmlspecialchars($user['username']); ?></td>
@@ -300,21 +294,21 @@ mysqli_close($conn);
 
 
                                                 <div class="text-center">
-                                                    <?php
-                                                    if ((int) $user['is_active'] === 1):
-                                                        ?>
-                                                        <!-- User is Active -> Show Deactivate Button -->
-                                                        <button type="button" class="btn btn-danger btn-sm"
-                                                            onclick="confirmAndDeactivate(<?php echo $user['user_id']; ?>, '<?php echo htmlspecialchars(addslashes($user['username'])); ?>')">
-                                                            Deactivate
-                                                        </button>
-                                                    <?php else: // User is Inactive (is_active is 0 or potentially NULL/other) ?>
-                                                        <!-- User is Inactive -> Show Reactivate Button -->
-                                                        <button type="button" class="btn btn-success btn-sm ms-1"
-                                                            onclick="confirmAndReactivate(<?php echo $user['user_id']; ?>, '<?php echo htmlspecialchars(addslashes($user['username'])); ?>')">
-                                                            Reactivate
-                                                        </button>
-                                                    <?php endif; ?>
+                                                <?php
+                                                if ((int) $user['is_active'] === 1):
+                                                    ?>
+                                                    <!-- User is Active -> Show Deactivate Button -->
+                                                    <button type="button" class="btn btn-danger btn-sm"
+                                                        onclick="confirmAndDeactivate(<?php echo $user['user_id']; ?>, '<?php echo htmlspecialchars(addslashes($user['username'])); ?>')">
+                                                        Deactivate
+                                                    </button>
+                                                <?php else: // User is Inactive (is_active is 0 or potentially NULL/other) ?>
+                                                    <!-- User is Inactive -> Show Reactivate Button -->
+                                                    <button type="button" class="btn btn-success btn-sm ms-1"
+                                                        onclick="confirmAndReactivate(<?php echo $user['user_id']; ?>, '<?php echo htmlspecialchars(addslashes($user['username'])); ?>')">
+                                                        Reactivate
+                                                    </button>
+                                                <?php endif; ?>
                                                 </div>
 
 
@@ -363,13 +357,7 @@ mysqli_close($conn);
 
 
 
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"
-        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-        crossorigin="anonymous"></script>
-
-    <script src="https://cdn.datatables.net/v/bs5/dt-2.2.2/b-3.2.2/r-3.0.4/rg-1.5.1/sp-2.3.3/datatables.min.js"
-        integrity="sha384-nymamBYemXgS5CQhRMYwuTFGz1N0o4cocvaMr1vST3CaMJ1h8BW5DfWm9BKAWdzY"
-        crossorigin="anonymous"></script> -->
+  
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         crossorigin="anonymous"></script>
@@ -391,7 +379,7 @@ mysqli_close($conn);
         function confirmAndReactivate(userId, username) {
             if (confirm(`Are you sure you want to REACTIVATE user '${username}' (ID: ${userId})? They will be able to log in again.`)) {
                 // Adjust path if reactivate_user.php is elsewhere
-                window.location.href = 'assets/php/reactivate_user.php?id=' + userId; // Assumes you create this file
+                window.location.href = 'assets/php/reactivate_user.php?id=' + userId; 
             }
         }
     </script>
